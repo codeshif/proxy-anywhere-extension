@@ -22,8 +22,9 @@ async function onLoad() {
   dialog = new DialogController('add-bypass-dialog');
   dialog.addEventListener('click', onDialogOk);
   dialog.addEventListener('load', onDialogLoad);
-  dialog.setTemplate({header: 'Bypass URL', ok: 'Add'});
+  dialog.setTemplate({header: t('dialog_header'), ok: t('dialog_ok')});
   dialog.init();
+  applyI18n();
 }
 
 /**

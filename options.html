@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
+  <meta charset="utf-8" />
   <title>Proxy Anywhere</title>
   <link rel="stylesheet" type="text/css" href="/css/common.css" />
   <link rel="stylesheet" type="text/css" href="/css/options.css" />
@@ -8,6 +9,7 @@
   <script type="text/javascript" src="/js/functions.js"></script>
   <script type="text/javascript" src="/js/settings.js"></script>
   <script type="text/javascript" src="/js/dialog_controller.js"></script>
+  <script type="text/javascript" src="/js/i18n.js"></script>
   <script type="text/javascript" src="/js/options.js"></script>
 </head>
 <body> 
@@ -17,24 +19,15 @@
       <h1>Proxy Anywhere<em id="version"></em></h1>
     </div>
     <p>
-      Make sure you save the settings after your done editing!
-      <a
-       href="https://chrome.google.com/webstore/detail/eejcbegfnjfjnmdikkplhbhnemddchbn">
-       Visit extension page
-      </a>,
-      <a
-       href="http://groups.google.com/group/mohamedmansour-extensions">
-       File bugs and suggestions
-      </a><br/><br/>
-      You should follow me on Twitter <a href="http://twitter.com/mohamedmansour">@mohamedmansour</a>
+      <span data-i18n="save_reminder">Make sure you save the settings after your done editing!</span>
     </p>
     <div class="extension-template">
-      <div class="extension-header">Proxy Server</div>
+      <div class="extension-header" data-i18n="proxy_server_header">Proxy Server</div>
       <div class="extension-options">
-        <p>The following section encapsulates a single proxy server's
+        <p data-i18n="proxy_server_desc">The following section encapsulates a single proxy server's
            specification. Make sure the server information is correct.</p>
         <dl>
-          <dt>Protocol:</dt>
+          <dt data-i18n="label_protocol">Protocol:</dt>
           <dd>
             <select id="scheme">
               <option value="http">http</option>
@@ -43,22 +36,22 @@
               <option value="socks5">socks5</option>
             </select>
           </dd>
-          <dt>Host:</dt>
+          <dt data-i18n="label_host">Host:</dt>
           <dd>
             <label for="host"><input type="text" id="host" /></label>
           </dd>
-          <dt>Port:</dt>
+          <dt data-i18n="label_port">Port:</dt>
           <dd>
             <label for="port"><input type="text" id="port" /></label>
           </dd>
-          <dt>Autostart:</dt>
+          <dt data-i18n="label_autostart">Autostart:</dt>
           <dd>
             <label for="autostart"><input type="checkbox" id="autostart" /></label>
           </dd>
-          <dt>Incognito only:</dt>
+          <dt data-i18n="label_incognito">Incognito only:</dt>
           <dd>
             <label for="incognito"><input type="checkbox" id="incognito" /></label>
-            <span class="note" id="incognito_note">
+            <span class="note" id="incognito_note" data-i18n="incognito_note">
               Only use this proxy setting for incognito windows.
             </span>
           </dd>
@@ -66,28 +59,28 @@
       </div>
     </div>
     <div class="extension-template">
-      <div class="extension-header">Exceptions</div>
+      <div class="extension-header" data-i18n="exceptions_header">Exceptions</div>
       <div class="extension-options">
-        <p>Individual servers may be excluded from being proxied.</p>
+        <p data-i18n="exceptions_desc">Individual servers may be excluded from being proxied.</p>
         <dl>
-          <dt>Bypass list:</dt>
+          <dt data-i18n="label_bypass">Bypass list:</dt>
           <dd>
             <select id="bypass_list" size="8"></select>
-            <button id="bypass-list-add" type="button">Add</button>
-            <button id="bypass-list-remove" type="button">Remove</button>
-            <button id="bypass-list-remove-all" type="button">Remove All</button>
+            <button id="bypass-list-add" type="button" data-i18n="btn_add">Add</button>
+            <button id="bypass-list-remove" type="button" data-i18n="btn_remove">Remove</button>
+            <button id="bypass-list-remove-all" type="button" data-i18n="btn_remove_all">Remove All</button>
             <div class="clear"></div>
           </dd>
         </dl>
       </div>
     </div>
     <div class="extension-template">
-      <div class="extension-header">Misc</div>
+      <div class="extension-header" data-i18n="misc_header">Misc</div>
       <div class="extension-options">
-        <p>If you would like to be notified of major upgrades to this extension,
+        <p data-i18n="misc_desc">If you would like to be notified of major upgrades to this extension,
            please make sure the box below is unchecked. You wont be spammed.</p>
         <dl>
-          <dt>Opt-Out of future notifications:</dt>
+          <dt data-i18n="label_opt_out">Opt-Out of future notifications:</dt>
           <dd>
             <label for="opt_out"><input type="checkbox" id="opt_out" /></label>
           </dd>
@@ -95,25 +88,26 @@
       </div>
     </div>
     <div id="extension-footer">
-      <span id="info-message">Options saved!</span>
-      <button id="button-save">Save</button>
-      <button id="button-close" type="button">Close</button>
+      <span id="info-message" data-i18n="info_saved">Options saved!</span>
+      <button id="button-save" data-i18n="btn_save">Save</button>
+      <button id="button-close" type="button" data-i18n="btn_close">Close</button>
     </div>
     <div id="credits">
-      Extension developed by <a href="http://www.mohamedmansour.com">Mohamed Mansour</a>, 
-      Source Code available in <a href="https://github.com/mohamedmansour/proxy-anywhere-extension">GitHub</a>
+      <span data-i18n="credits_developed">Extension developed by</span> <a href="http://www.mohamedmansour.com">Mohamed Mansour</a>,
+      <span data-i18n="credits_source">Source Code available in</span> <a href="https://github.com/mohamedmansour/proxy-anywhere-extension">GitHub</a>,
+      <span data-i18n="credits_modified">Modified by</span> <a href="https://github.com/codeshif/proxy-anywhere-extension">codeshif</a>
     </div>
   </div>
   </form>
   <div id="add-bypass-dialog">
-    <p>Please add a URL to be exluded from being proxied. The available formats 
+    <p data-i18n="dialog_desc">Please add a URL to be exluded from being proxied. The available formats
        mentioned below. You can add multiple ones separated with a comma.</p>
-    <p class="subtitle">Examples: </p>
+    <p class="subtitle" data-i18n="dialog_examples">Examples: </p>
     <p class="examples">"foobar.com", "*foobar.com", "*.foobar.com", "*foobar.com:99",
-       "https://x.*.y.com:99", "127.0.1", "[0:0::1]", "[::1]", "http://[::1]:99",
-        "192.168.1.1/16", "fefe:13::abc/33", "&lt;local&gt;"</p>
-    <p class="subtitle">URL: </p>
-    <input type="text" value="" placeholder="URL to exclude" id="bypass-item-add"/>
+        "https://x.*.y.com:99", "127.0.1", "[0:0::1]", "[::1]", "http://[::1]:99",
+         "192.168.1.1/16", "fefe:13::abc/33", "&lt;local&gt;"</p>
+    <p class="subtitle" data-i18n="dialog_url">URL: </p>
+    <input type="text" value="" placeholder="URL to exclude" data-i18n-placeholder="dialog_url_placeholder" id="bypass-item-add"/>
   </div>
 </body>
 </html>
