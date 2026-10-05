@@ -45,7 +45,6 @@ async function onSave() {
     scheme: $('scheme').value,
     host: $('host').value,
     port: isNaN(port) ? 8080 : port,
-    opt_out: $('opt_out').checked,
     autostart: $('autostart').checked,
     incognito: $('incognito').checked,
     bypass: getBypassList()
@@ -83,7 +82,6 @@ async function onRestore() {
 
   // Restore settings.
   $('version').innerHTML = ' (v' + chrome.runtime.getManifest().version + ')';
-  $('opt_out').checked = s.opt_out;
   $('host').value = s.host;
   $('port').value = s.port;
   $('scheme').value = s.scheme;

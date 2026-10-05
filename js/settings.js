@@ -2,7 +2,7 @@
 settings = {
   KEYS: [
     'version', 'scheme', 'host', 'port',
-    'opt_out', 'autostart', 'incognito', 'bypass', 'proxy_active'
+    'autostart', 'incognito', 'bypass', 'proxy_active'
   ],
 
   async getAll() {
@@ -13,7 +13,6 @@ settings = {
       scheme: data.scheme || 'http',
       host: data.host || 'localhost',
       port: (data.port === undefined || data.port === null || data.port === '' || isNaN(port)) ? 8080 : port,
-      opt_out: data.opt_out !== false,
       autostart: data.autostart === true,
       incognito: data.incognito === true,
       bypass: data.bypass || ['<local>'],
