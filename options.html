@@ -6,11 +6,12 @@
   <link rel="stylesheet" type="text/css" href="/css/options.css" />
   <link rel="stylesheet" type="text/css" href="/css/options-proxy.css" />
   <script type="text/javascript" src="/js/functions.js"></script>
+  <script type="text/javascript" src="/js/settings.js"></script>
   <script type="text/javascript" src="/js/dialog_controller.js"></script>
   <script type="text/javascript" src="/js/options.js"></script>
 </head>
 <body> 
-  <form onsubmit="return false;">
+  <form>
   <div id="body-container">
     <div id="header">
       <h1>Proxy Anywhere<em id="version"></em></h1>
@@ -72,9 +73,9 @@
           <dt>Bypass list:</dt>
           <dd>
             <select id="bypass_list" size="8"></select>
-            <button id="bypass-list-add">Add</button>
-            <button id="bypass-list-remove">Remove</button>
-            <button id="bypass-list-remove-all">Remove All</button>
+            <button id="bypass-list-add" type="button">Add</button>
+            <button id="bypass-list-remove" type="button">Remove</button>
+            <button id="bypass-list-remove-all" type="button">Remove All</button>
             <div class="clear"></div>
           </dd>
         </dl>
@@ -96,7 +97,7 @@
     <div id="extension-footer">
       <span id="info-message">Options saved!</span>
       <button id="button-save">Save</button>
-      <button id="button-close">Close</button>
+      <button id="button-close" type="button">Close</button>
     </div>
     <div id="credits">
       Extension developed by <a href="http://www.mohamedmansour.com">Mohamed Mansour</a>, 
