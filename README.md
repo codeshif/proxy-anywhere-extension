@@ -55,8 +55,8 @@ This fork contains the following changes on top of the original extension:
 
 ### Screenshots
 
-![Screenshot of the Chrome Extension](https://github.com/mohamedmansour/proxy-anywhere-extension/raw/master/screenshot/proxy_screenshot.png)
-![Screenshot of the Chrome Extension](https://github.com/mohamedmansour/proxy-anywhere-extension/raw/master/screenshot/proxy_screenshot_bypass.png)
+![Screenshot of the Chrome Extension](https://github.com/codeshif/proxy-anywhere-extension/raw/master/screenshot/proxy_screenshot.png)
+![Screenshot of the Chrome Extension](https://github.com/codeshif/proxy-anywhere-extension/raw/master/screenshot/proxy_screenshot_bypass.png)
 
 <a id="chinese"></a>
 
@@ -107,5 +107,4 @@ This fork contains the following changes on top of the original extension:
 
 ### 截图
 
-![Screenshot of the Chrome Extension](https://github.com/mohamedmansour/proxy-anywhere-extension/raw/master/screenshot/proxy_screenshot.png)
-![Screenshot of the Chrome Extension](https://github.com/mohamedmansour/proxy-anywhere-extension/raw/master/screenshot/proxy_screenshot_bypass.png)
+![Screenshot of the Chrome Extension (Chinese)](https://github.com/codeshif/proxy-anywhere-extension/raw/master/screenshot/chinese_proxy_screenshot.png)
